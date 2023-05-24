@@ -23,3 +23,19 @@ func TestEncode(t *testing.T) {
 func TestDecode(t *testing.T) {
 	decodeJson()
 }
+
+func TestMapJsonDecode(t *testing.T) {
+	mapJsonDecode()
+}
+
+func TestMapJsonEncode(t *testing.T) {
+	mapJsonEncode()
+}
+
+func TestStreamDecoder(t *testing.T) {
+	streamDecoder()
+}
+
+func TestStreamEncoder(t *testing.T) {
+	streamEncoder()
+}
