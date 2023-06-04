@@ -20,3 +20,19 @@ func TestExist(t *testing.T) {
 		fmt.Print("not exist")
 	}
 }
+
+func TestSliceExist(t *testing.T) {
+	mySlice := []interface{}{
+		123, "one", true, 123.55,
+	}
+
+	for _, v := range mySlice {
+		if v ==1239 {
+			fmt.Println("there")
+			return
+		}else{
+			fmt.Println("not there")
+			return
+		}
+	}
+}
