@@ -18,21 +18,20 @@ func TestContainerLesson(t *testing.T) {
 	for e := myList.Front(); e != nil; e = e.Next() {
 		fmt.Println(e.Value)
 	} 
-	search, elem := SearchList(9, myList)
+	search, elem := SearchList(4, myList)
 	log.Println("element in index ", search, ": ", elem)
 }
 
 func SearchList(search int, listP *list.List) (int, interface{}){
-	currenIndex := 1
+	currenIndex := 0
 	var i interface{}
 	for e := listP.Front(); e != nil; e = e.Next() {
 		if currenIndex == search {
 			i = e.Value
-			break
+			return search, i
 		}else{
-			return search, "not exist"
+			return 0, "not"
 		}
-		
 	}
-	return search, i
+	return 0, "not" 
 }
