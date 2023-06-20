@@ -46,6 +46,9 @@ func TestExec(t *testing.T) {
 	for scanner.Scan() {
 		fmt.Println(scanner.Text())
 	}
-	ctx, _ := context.WithTimeout(context.Background(), 5*time.Second)
+	ctx, tt := context.WithTimeout(context.Background(), 5*time.Second)
+	if tt != nil {
+		ctx.Deadline()
+	}
 	s.Shutdown(ctx)
 }
