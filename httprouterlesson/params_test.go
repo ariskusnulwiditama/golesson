@@ -61,7 +61,7 @@ func TestRouterPatternCatchAllParameter(t *testing.T) {
 	recorder := httptest.NewRecorder()
 
 	router.ServeHTTP(recorder, request)
-
+	
 	response := recorder.Result()
 	body, _ := io.ReadAll(response.Body)
 
